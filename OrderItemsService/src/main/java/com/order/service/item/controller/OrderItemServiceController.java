@@ -24,7 +24,7 @@ public class OrderItemServiceController {
 		return service.saveOrderItem(orderItem);
 	}
 	@GetMapping(value="/getAllItems")
-	public List<OrderItemService> getAllOrderItem() {
+	public List<OrderItemService> getAllOrderItem() { 
 		return service.getAllOrderItem();
 	}
 }
