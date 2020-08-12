@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class OrderItamService implements Serializable {
+public class OrderItemService implements Serializable {
 
 	private static final long serialVersionUID = 6590639235371898917L;
   
@@ -16,10 +16,9 @@ public class OrderItamService implements Serializable {
 	private Integer productCode;
 	private String productName;
 	private Integer qantity;
-	public OrderItamService() {
-		// TODO Auto-generated constructor stub
+	public OrderItemService() {
 	}
-	public OrderItamService(Integer productCode, String productName, Integer qantity) {
+	public OrderItemService(Integer productCode, String productName, Integer qantity) {
 		super();
 		this.productCode = productCode;
 		this.productName = productName;
@@ -45,7 +44,7 @@ public class OrderItamService implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "OrderItamService [productCode=" + productCode + ", productName=" + productName + ", qantity=" + qantity
+		return "OrderItemService [productCode=" + productCode + ", productName=" + productName + ", qantity=" + qantity
 				+ "]";
 	}
 

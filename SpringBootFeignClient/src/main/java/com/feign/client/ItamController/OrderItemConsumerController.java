@@ -7,20 +7,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.feign.client.model.OrderItamService;
+import com.feign.client.model.OrderItemService;
 
 @RestController
-@RequestMapping(value="/orderItam")
-public class OrederItamConsumerController {
+@RequestMapping(value="/orderItem")
+public class OrderItemConsumerController {
 
 	@Autowired
-     private OrderItamFiegnClient fClient;
+     private OrderItemFiegnClient fClient;
 	@PostMapping(value="/save")
-	public OrderItamService saveItam(@RequestBody OrderItamService service) {
-		 return fClient.saveItamOrder(service);
+	public OrderItemService saveItem(@RequestBody OrderItemService service) {
+		 return fClient.saveItemOrder(service);
 	}
-	@GetMapping(value="/getItams")
-	public OrderItamService getAll() {
-	return	fClient.getAllOrderItam();
-	}//http://localhost:8524/orderItam/
+	@GetMapping(value="/getItems")
+	public OrderItemService getAll() {
+	return	fClient.getAllOrderItem();
+	}
 }

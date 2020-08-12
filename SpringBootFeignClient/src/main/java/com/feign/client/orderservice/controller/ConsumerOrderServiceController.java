@@ -20,7 +20,7 @@ public class ConsumerOrderServiceController {
 	@PostMapping(value = "/savaservice")
 	public OrderService saveOrder(@RequestBody OrderService orderService) {
           return orderFiegn.saveOrder(orderService) ;
-	}//http://localhost:8524/OrderService/savaservice
+	}
 	@GetMapping(value = "/fetchAll")
 	public List<OrderService> getAllOrders(){
 		return orderFiegn.getAllOrders();
